@@ -2,12 +2,14 @@
   "appName": "AppFlowy",
   "defaultUsername": "Eu",
   "welcomeText": "Bem vindo ao @:appName",
+  "welcomeTo": "Benvindo ao",
   "githubStarText": "Dar uma estrela no Github",
   "subscribeNewsletterText": "Inscreve-te no Newsletter",
   "letsGoButtonText": "Bora",
   "title": "Título",
   "youCanAlso": "Você também pode",
   "and": "e",
+  "failedToOpenUrl": "Falha ao abrir o url: {}",
   "blockActions": {
     "addBelowTooltip": "Clique para adicionar abaixo",
     "addAboveCmd": "Alt+clique",
@@ -35,6 +37,7 @@
     "loginStartWithAnonymous": "Começar com uma sessão anónima",
     "continueAnonymousUser": "Continuar com uma sessão anónima",
     "buttonText": "Entre",
+    "signingInText": "A entrar...",
     "forgotPassword": "Esqueceste-te da tua palavra-passe?",
     "emailHint": "Email",
     "passwordHint": "Palavra-passe",
@@ -55,12 +58,23 @@
     "reset": "Reiniciar o ambiente de trabalho",
     "resetWorkspacePrompt": "Reinciar do espaço de trabalho excluirá todas as páginas e dados contidos. Tem certeza de que deseja reiniciar o espaço de trabalho? Alternativamente, podes entrar em contato com a equipe de suporte para restaurar o espaço de trabalho",
     "hint": "ambiente de trabalho",
-    "notFoundError": "Ambiente de trabalho não encontrada",
+    "notFoundError": "Ambiente de trabalho não encontrado",
     "failedToLoad": "Algo correu mal! Falha ao carregar o espaço de trabalho. Tente fechar qualquer instância aberta do AppFlowy e tente novamente.",
     "errorActions": {
       "reportIssue": "Relatar problema",
+      "reportIssueOnGithub": "Reportar um problema no Github",
+      "exportLogFiles": "Exportar ficheiros de log",
       "reachOut": "Entre em contacto no Discord"
-    }
+    },
+    "deleteWorkspaceHintText": "Tem a certeza que quer eliminar o ambiente de trabalho? Esta ação não pode ser revertida.",
+    "createSuccess": "Ambiente de trabalho criado com sucesso",
+    "createFailed": "Falha na criação do ambiente de trabalho",
+    "deleteSuccess": "Ambiente de trabalho eliminado com sucesso",
+    "deleteFailed": "Falha ao eliminar o ambiente de trabalho",
+    "openSuccess": "Ambiente de trabalho aberto com sucesso",
+    "openFailed": "Falha a abrir o ambiente de trabalho",
+    "renameSuccess": "Ambiente de trabalho renomeado com sucesso",
+    "renameFailed": "Falha a renomear o ambiente de trabalho"
   },
   "shareAction": {
     "buttonText": "Partilhar",
@@ -75,7 +89,10 @@
     "large": "grande",
     "fontSize": "Tamanho da fonte",
     "import": "Importar",
-    "moreOptions": "Mais opções"
+    "moreOptions": "Mais opções",
+    "createdAt": "Criado em: {}",
+    "deleteView": "Apagar",
+    "duplicateView": "Duplicar"
   },
   "importPanel": {
     "textAndMarkdown": "Texto e Remarcação",
@@ -117,6 +134,10 @@
     "confirmRestoreAll": {
       "title": "Tem certeza de que deseja restaurar todas as páginas da Lixeira?",
       "caption": "Essa ação não pode ser desfeita."
+    },
+    "mobile": {
+      "empty": "Lixeira está vazia",
+      "emptyDescription": "Você não tem nenhum ficheiro apagado"
     }
   },
   "deletePagePrompt": {
@@ -170,7 +191,9 @@
     "dragRow": "Pressione e segure para reordenar a linha",
     "viewDataBase": "Ver banco de dados",
     "referencePage": "Este {name} é referenciado",
-    "addBlockBelow": "Adicione um bloco abaixo"
+    "addBlockBelow": "Adicione um bloco abaixo",
+    "urlLaunchAccessory": "Abrir no browser",
+    "urlCopyAccessory": "Copiar URL"
   },
   "sideBar": {
     "closeSidebar": "Close sidebar",
@@ -179,7 +202,8 @@
     "favorites": "Favoritos",
     "clickToHidePersonal": "Clique para ocultar a seção pessoal",
     "clickToHideFavorites": "Clique para ocultar a seção favorita",
-    "addAPage": "Adicionar uma página"
+    "addAPage": "Adicionar uma página",
+    "recent": "Recente"
   },
   "notifications": {
     "export": {
@@ -208,11 +232,25 @@
     "discard": "Descartar",
     "replace": "Substituir",
     "insertBelow": "Inserir Abaixo",
+    "insertAbove": "Inserir acima",
     "upload": "Carregar",
     "edit": "Editar",
     "delete": "Excluir",
     "duplicate": "Duplicado",
-    "putback": "Por de volta"
+    "putback": "Por de volta",
+    "update": "Atualizar",
+    "share": "Partilhar",
+    "removeFromFavorites": "Remover dos favoritos",
+    "addToFavorites": "Adicionar aos favoritos",
+    "rename": "Renomear",
+    "helpCenter": "Centro de Ajuda",
+    "add": "Adicionar",
+    "yes": "Sim",
+    "clear": "Limpar",
+    "remove": "Remover",
+    "dontRemove": "Não remover",
+    "copyLink": "Copiar Link",
+    "align": "Alinhar"
   },
   "label": {
     "welcome": "Bem vindo!",
@@ -247,8 +285,17 @@
       "logoutPrompt": "Tem certeza de que deseja sair?",
       "selfEncryptionLogoutPrompt": "Tem certeza que deseja sair? Certifique-se de ter copiado o código de encriptação",
       "syncSetting": "Configuração da sincronização",
+      "cloudSettings": "Definições da Cloud",
       "enableSync": "Ativar sincronização",
       "enableEncrypt": "Encriptar dados dados",
+      "cloudURL": "URL base",
+      "invalidCloudURLScheme": "Esquema inválido",
+      "cloudServerType": "Servidor da Cloud",
+      "cloudLocal": "Local",
+      "appFlowyCloudUrlCanNotBeEmpty": "O url da cloud não pode estar vazio",
+      "clickToCopy": "Clicar para copiar",
+      "selfHostContent": "documento",
+      "restartApp": "Reiniciar",
       "enableEncryptPrompt": "Ative a encriptação para proteger seus dados com esta palavra-chave. Armazene-o com segurança; uma vez ativado, não pode ser desativado. Se perdidos, seus dados se tornarão irrecuperáveis. Clique para copiar",
       "inputEncryptPrompt": "Por favor, insira a sua palavra-chave de encriptação para",
       "clickToCopySecret": "Clique para copiar a palvra-chave",
@@ -740,6 +787,10 @@
       "previousMonth": "Mês anterior",
       "nextMonth": "Próximo mês"
     },
+    "mobileEventScreen": {
+      "emptyTitle": "Sem eventos ainda",
+      "emptyBody": "Carregar no botão mais (+) para criar um evento neste dia."
+    },
     "settings": {
       "showWeekNumbers": "Mostrar números da semana",
       "showWeekends": "Mostrar fins de semana",
@@ -750,7 +801,8 @@
       "name": "Layout do calendário",
       "noDateHint": "Eventos não agendados aparecerão aqui"
     },
-    "referencedCalendarPrefix": "Vista de"
+    "referencedCalendarPrefix": "Vista de",
+    "quickJumpYear": "Ir para"
   },
   "errorDialog": {
     "title": "Erro do AppFlowy",
